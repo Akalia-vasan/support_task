@@ -23,6 +23,14 @@ php artisan optimize
 php artisan route:clear
 php artisan serve
 
+9. Agents can log in to the system using the following credentials:
+    Email: agent@gmail.com
+    password : 12345678
+
+10. Emails can be viewed using Mailtrap
+
+     
+
 Screenshots
 1. Screen for create Support tickts
 ![alt text](image-1.png)

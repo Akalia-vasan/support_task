@@ -192,7 +192,7 @@
               <table id="facility_table" class="custom-table display nowrap" width="100%">
                   <thead>
                       <tr  style="border:none;background-color:skyblue !important;color:white;">
-                      
+                      <th>Reference No.</th>
                       <th>Customer</th>
                       <th>Email</th>
                       <th>Contact No</th>
@@ -223,7 +223,7 @@
             aaSorting: [[0, 'desc']],
             ajax: ajax_url,
             columnDefs: [{
-                "targets": [3,4],
+                "targets": [4,5],
                 "orderable": false,
                 "searchable": false
             }],
@@ -235,6 +235,7 @@
                 },
 
             columns: [
+                { data: 'ref_no', name: 'ref_no' },
                 { data: 'customer_name', name: 'customer_name' },
                 { data: 'email', name: 'email' },
                 { data: 'phone', name: 'phone' },

@@ -7,7 +7,7 @@ use App\Http\Controllers\Agent\AgentController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 Route::get('login', [LoginController::class, 'index'])->name('login');
 Route::post('post-login', [LoginController::class, 'post'])->name('login.post');
 
@@ -16,7 +16,7 @@ Route::get('support-ticket/search', [SupportTicketController::class, 'search'])-
 Route::post('support-ticket/search', [SupportTicketController::class, 'postSeach'])->name('search.post');
 
 Route::middleware('auth')->group(function () {
-    Route::get('dashboard', [LoginController::class, 'dashboard']); 
+    Route::get('dashboard', [LoginController::class, 'dashboard'])->name('dashboard'); 
     Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 
     Route::get('tickets', [AgentController::class, 'index'])->name('agent.index');

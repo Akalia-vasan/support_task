@@ -17,6 +17,7 @@ class AgentController extends Controller
         $tickets = SupportTicket::orderBy('id', 'DESC')
         ->select([
             'id',
+            'ref_no',
             'customer_name',
             'email',
             'phone',
